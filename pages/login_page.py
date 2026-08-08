@@ -1,10 +1,11 @@
 from locators.login_locators import LoginLocators
-
+from utils.wait_helper import WaitHelper
 
 class LoginPage:
 
     def __init__(self, driver):
         self.driver = driver
+        self.wait = WaitHelper(driver)
 
     def open(self):
         self.driver.get(
@@ -12,21 +13,19 @@ class LoginPage:
         )
 
     def enter_username(self, username):
-        self.driver.find_element(*LoginLocators.USERNAME).send_keys(username)
+        self.wait.wait_for_element_visible(LoginLocators.USERNAME).send_keys(username)
 
     def enter_password(self, password):
-        self.driver.find_element(*LoginLocators.PASSWORD).send_keys(password)
+        self.wait.wait_for_element_visible(LoginLocators.PASSWORD).send_keys(password)
 
     def click_login(self):
-        self.driver.find_element(*LoginLocators.LOGIN_BUTTON).click()
+        self.wait.wait_for_element_clickable(LoginLocators.LOGIN_BUTTON).click()
 
     def get_success_message(self):
-        return self.driver.find_element(
-            *LoginLocators.SUCCESS_MESSAGE
-        ).text
+        return self.wait.wait_for_element_visible(LoginLocators.SUCCESS_MESSAGE).text
 
     def logout(self):
 
-        self.driver.find_element(
-            *LoginLocators.LOGOUT_BUTTON
+        self.wait.wait_for_element_clickable(
+            LoginLocators.LOGOUT_BUTTON
         ).click()

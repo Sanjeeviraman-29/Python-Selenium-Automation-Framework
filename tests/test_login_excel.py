@@ -1,6 +1,7 @@
 from pages.login_page import LoginPage
 from utils.excel_reader import ExcelReader
 from utils.logger import Logger
+from utils.screenshot import Screenshot
 
 def test_login_using_excel(driver):
 
@@ -33,16 +34,32 @@ def test_login_using_excel(driver):
 
         if expected == "Success":
 
-            assert "logged-in-successfully" in driver.current_url
+            try:
 
-            logger.info("Login Successful")
+                assert "logged-in-successfully" in driver.current_url
 
-            login.logout()
+                logger.info("Login Successful")
+
+                login.logout()
+
+            except AssertionError:
+
+                Screenshot.capture(driver, "Valid_Login_Failure")
+
+                raise
 
         else:
 
-            assert "practice-test-login" in driver.current_url
+            try:
 
-            logger.warning("Invalid Login Verified")
+                assert "practice-test-login" in driver.current_url
+
+                logger.warning("Invalid Login Verified")
+
+            except AssertionError:
+
+                Screenshot.capture(driver, "Invalid_Login_Failure")
+
+                raise
 
     logger.info("========== Test Finished ==========")
