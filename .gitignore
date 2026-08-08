@@ -1,14 +1,28 @@
+# Virtual Environment
 venv/
+
+# Python
 __pycache__/
-.pytest_cache/
 *.pyc
+*.pyo
+*.pyd
 
-reports/
-screenshots/
-logs/
+# Pytest
+.pytest_cache/
 
-.idea/
+# IDE
 .vscode/
+.idea/
 
+# Logs
+logs/*.log
+
+# Reports
+reports/*.html
+
+# Screenshots
+screenshots/*.png
+
+# OS
 .DS_Store
-~$*.xlsx
+Thumbs.db

@@ -1,254 +1,340 @@
-# 🚀 Selenium Automation Framework (Python)
+# 🚀 Selenium Automation Framework
 
-A scalable Selenium Automation Framework built using **Python**, **PyTest**, and the **Page Object Model (POM)**. This framework demonstrates industry-standard automation practices including cross-browser testing, data-driven testing, logging, reporting, screenshots, explicit waits, JavaScript execution, and more.
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
+![Selenium](https://img.shields.io/badge/Selenium-WebDriver-brightgreen?logo=selenium)
+![PyTest](https://img.shields.io/badge/PyTest-Testing-orange?logo=pytest)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
----
+A **Python Selenium Automation Framework** developed using **PyTest** and the **Page Object Model (POM)** design pattern.
 
-# 📌 Project Overview
+The framework demonstrates real-world automation techniques including:
 
-This framework was developed to automate web application testing using reusable components and best practices followed in real-world automation projects.
-
-The project is designed with:
-
-- Page Object Model (POM)
-- PyTest Framework
 - Cross Browser Testing
-- Explicit Waits
 - Data Driven Testing using Excel
-- HTML Reporting
 - Logging
-- Screenshot Capture
-- JavaScript Executor
-- Assertions
-- Modular Framework Design
-
----
-
-# 🏗 Project Structure
-
-```
-SeleniumAutomationFramework
-│
-├── locators/
-├── pages/
-├── reports/
-├── resources/
-│     └── data/
-├── screenshots/
-├── logs/
-├── tests/
-├── utils/
-│
-├── conftest.py
-├── pytest.ini
-├── requirements.txt
-└── README.md
-```
-
----
-
-# ⚙ Technologies Used
-
-- Python 3.13
-- Selenium WebDriver
-- PyTest
-- OpenPyXL
-- PyTest HTML Report
-- Logging
-- ChromeDriver
-- Firefox Driver
-- Edge Driver
-
----
-
-# ✅ Features Implemented
-
-### Browser Management
-
-- Chrome
-- Firefox
-- Edge
-- Cross Browser Execution
-
----
-
-### Selenium Concepts
-
-- Open Website
-- Login Automation
-- Navigation
-- Browser Refresh
-- Back & Forward Navigation
-- Multiple Tabs
-- Window Switching
-- Alerts
-- Frames
-- Dropdowns
-- Checkboxes
-- Radio Buttons
-- JavaScript Executor
-- Explicit Waits
-- Assertions
-
----
-
-### Data Driven Testing
-
-- Excel Reader
-- Multiple Login Scenarios
-- Positive & Negative Test Cases
-
----
-
-### Reporting
-
-- HTML Report
-- Logging
+- HTML Reports
 - Screenshots
+- JavaScript Executor
+- Window Handling
+- Frames
+- Alerts
+- Action Chains
+- Drag & Drop
+- Broken Image Detection
 
 ---
 
-### Framework Features
+# 📑 Table of Contents
 
-- Page Object Model (POM)
-- Locator Separation
-- Utility Classes
-- Reusable Components
-- PyTest Fixtures
-
----
-
-# ▶ Running Tests
-
-Execute all tests
-
-```bash
-pytest
-```
-
-Run in Chrome
-
-```bash
-pytest --browser chrome
-```
-
-Run in Firefox
-
-```bash
-pytest --browser firefox
-```
-
-Run in Edge
-
-```bash
-pytest --browser edge
-```
-
-Generate HTML Report
-
-```bash
-pytest --html=reports/report.html
-```
+- Features
+- Tech Stack
+- Project Structure
+- Installation
+- Running Tests
+- Framework Architecture
+- Test Scenarios Covered
+- Reports
+- Screenshots
+- Future Enhancements
+- Author
+- License
 
 ---
 
-# 📊 Framework Architecture
+# ✨ Features
 
-```
-Tests
-   │
-   ▼
-Page Objects
-   │
-   ▼
-Locators
-   │
-   ▼
-Utilities
-   │
-   ▼
-Selenium WebDriver
-```
+✔ Page Object Model (POM)
 
----
+✔ Cross Browser Testing
 
-# 📂 Reports
-
-HTML reports are automatically generated inside
-
-```
-reports/
-```
-
----
-
-# 📝 Logs
-
-Execution logs are generated inside
-
-```
-logs/
-```
-
----
-
-# 📷 Screenshots
-
-Screenshots are stored inside
-
-```
-screenshots/
-```
-
----
-
-# 📋 Test Scenarios Covered
-
-✔ Login Automation
-
-✔ Data Driven Login
-
-✔ Browser Navigation
-
-✔ Browser Tabs
-
-✔ Alerts
-
-✔ Frames
-
-✔ Dropdown
-
-✔ Checkbox
-
-✔ Radio Button
-
-✔ JavaScript Executor
+✔ Excel Data Driven Framework
 
 ✔ HTML Reports
 
 ✔ Logging
 
-✔ Screenshots
+✔ Screenshot Capture
 
-✔ Assertions
+✔ JavaScript Executor
 
-✔ Cross Browser Testing
+✔ Explicit Waits
+
+✔ Window Handling
+
+✔ Frame Handling
+
+✔ Alert Handling
+
+✔ Drag and Drop
+
+✔ Dropdown Handling
+
+✔ Checkbox Handling
+
+✔ Radio Button Handling
+
+✔ Broken Image Detection
+
+✔ Action Chains
+
+✔ Context Click
 
 ---
 
-# 🚀 Future Enhancements
+# 🛠 Tech Stack
 
-- Broken Image Detection
-- Broken Link Validation
-- Window Handling
-- ActionChains
-- Robot Class
+| Technology | Used |
+|------------|------|
+| Python | ✅ |
+| Selenium WebDriver | ✅ |
+| PyTest | ✅ |
+| OpenPyXL | ✅ |
+| Logging | ✅ |
+| HTML Reports | ✅ |
+| Page Object Model | ✅ |
+| Git | ✅ |
+| GitHub | ✅ |
+
+---
+
+# 📂 Project Structure
+
+```text
+SeleniumAutomationFramework/
+│
+├── locators/
+│
+├── logs/
+│
+├── pages/
+│
+├── reports/
+│
+├── resources/
+│   └── data/
+│
+├── screenshots/
+│
+├── tests/
+│
+├── utils/
+│
+├── conftest.py
+├── pytest.ini
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+---
+
+# ⚙ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/SeleniumAutomationFramework.git
+```
+
+Move into the project
+
+```bash
+cd SeleniumAutomationFramework
+```
+
+Create virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate
+
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# ▶ Running Tests
+
+Run all tests
+
+```bash
+pytest
+```
+
+Run with HTML report
+
+```bash
+pytest --html=reports/report.html
+```
+
+Run Chrome
+
+```bash
+pytest --browser chrome
+```
+
+Run Edge
+
+```bash
+pytest --browser edge
+```
+
+Run Firefox
+
+```bash
+pytest --browser firefox
+```
+
+---
+
+# 🏗 Framework Architecture
+
+```
+Test
+
+↓
+
+Page Object
+
+↓
+
+Locators
+
+↓
+
+Selenium WebDriver
+
+↓
+
+Browser
+```
+
+---
+
+# ✅ Test Scenarios Covered
+
+| Scenario | Status |
+|----------|--------|
+| Login Automation | ✅ |
+| Data Driven Login | ✅ |
+| Excel Reader | ✅ |
+| Cross Browser | ✅ |
+| HTML Reports | ✅ |
+| Logging | ✅ |
+| Screenshots | ✅ |
+| Explicit Wait | ✅ |
+| Navigation | ✅ |
+| Browser Tabs | ✅ |
+| Alerts | ✅ |
+| Frames | ✅ |
+| Dropdown | ✅ |
+| Checkbox | ✅ |
+| Radio Button | ✅ |
+| JavaScript Executor | ✅ |
+| Drag and Drop | ✅ |
+| Context Click | ✅ |
+| Broken Images | ✅ |
+
+---
+
+# 📊 Reports
+
+The framework automatically generates:
+
+- HTML Reports
+- Logs
+- Screenshots
+
+Example
+
+```
+reports/
+    report.html
+
+logs/
+    automation.log
+
+screenshots/
+    Login_20260808.png
+```
+
+---
+
+# 📸 Screenshots
+
+## Login Automation
+
+> *(Add your Login Success screenshot here)*
+
+```
+screenshots/login-success.png
+```
+
+---
+
+## HTML Report
+
+> *(Add your report screenshot here)*
+
+```
+screenshots/html-report.png
+```
+
+---
+
+## Drag and Drop
+
+> *(Add Drag & Drop screenshot here)*
+
+```
+screenshots/drag-drop.png
+```
+
+---
+
+## Context Menu
+
+> *(Add Context Click screenshot here)*
+
+```
+screenshots/context-click.png
+```
+
+---
+
+## Window Handling
+
+> *(Add Window Handling screenshot here)*
+
+```
+screenshots/window-handling.png
+```
+
+---
+
+# 📌 Future Enhancements
+
 - Jenkins Integration
-- Docker Execution
-- GitHub Actions CI/CD
-- Allure Reports
+- Docker Support
 - Parallel Execution
-- Headless Browser Execution
+- Allure Reports
+- GitHub Actions CI/CD
+- API Automation
+- Database Validation
+- BDD using Behave
+- Cloud Execution (BrowserStack / Sauce Labs)
 
 ---
 
@@ -256,14 +342,18 @@ screenshots/
 
 **Sanjeevi raman N**
 
-Bachelor of Engineering – Computer Science and Engineering
+Computer Science Engineering Student
 
-Chennai Institute of Technology and Applied Research
+Python | Selenium | Java | SQL | Automation Testing
 
-GitHub: https://github.com/Sanjeeviraman-29
+GitHub:
+https://github.com/Sanjeeviraman-29
 
-LinkedIn: https://www.linkedin.com/in/sanjeevi-raman/
+LinkedIn:
+https://www.linkedin.com/in/sanjeevi-raman/
 
 ---
 
-⭐ If you found this project useful, don't forget to star the repository.
+# 📄 License
+
+This project is licensed under the MIT License.
