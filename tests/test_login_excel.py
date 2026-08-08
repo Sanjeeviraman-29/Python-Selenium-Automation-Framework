@@ -34,32 +34,16 @@ def test_login_using_excel(driver):
 
         if expected == "Success":
 
-            try:
+            assert "logged-in-successfully" in driver.current_url
 
-                assert "logged-in-successfully" in driver.current_url
+            logger.info("Login Successful")
 
-                logger.info("Login Successful")
-
-                login.logout()
-
-            except AssertionError:
-
-                Screenshot.capture(driver, "Valid_Login_Failure")
-
-                raise
+            login.logout()
 
         else:
 
-            try:
+            assert "practice-test-login" in driver.current_url
 
-                assert "practice-test-login" in driver.current_url
-
-                logger.warning("Invalid Login Verified")
-
-            except AssertionError:
-
-                Screenshot.capture(driver, "Invalid_Login_Failure")
-
-                raise
-
+            logger.warning("Invalid Login Verified")
+            
     logger.info("========== Test Finished ==========")
